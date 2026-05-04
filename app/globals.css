@@ -1,0 +1,477 @@
+@import "tailwindcss";
+
+/* ============================================
+   RESET & BASE
+   ============================================ */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: #f8f7ff;
+  color: #1a1a2e;
+  font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* ============================================
+   PAGE WRAPPER – Mobile-first, max 460px centered
+   ============================================ */
+.page-wrapper {
+  width: 100%;
+  max-width: 460px;
+  margin: 0 auto;
+  min-height: 100vh;
+  background: #ffffff;
+  position: relative;
+  /* Subtle shadow on desktop so it looks like a phone */
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.08);
+  /* Bottom padding for sticky bar */
+  padding-bottom: 80px;
+}
+
+/* ============================================
+   HERO HEADER
+   ============================================ */
+.hero-header {
+  background: linear-gradient(160deg, #ff4444 0%, #ff6b35 50%, #ffaa00 100%);
+  padding: 40px 20px 32px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle bg pattern */
+.hero-header::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 80% 20%, rgba(255,255,255,0.15) 0%, transparent 50%),
+              radial-gradient(circle at 20% 80%, rgba(255,255,255,0.1) 0%, transparent 40%);
+  pointer-events: none;
+}
+
+/* Avatar */
+.avatar-wrap {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 12px;
+}
+
+.avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.25);
+  border: 3px solid rgba(255,255,255,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.avatar-emoji {
+  font-size: 36px;
+  line-height: 1;
+}
+
+/* Live dot */
+.live-dot {
+  position: absolute;
+  bottom: 4px;
+  right: 4px;
+  width: 16px;
+  height: 16px;
+  background: #4ade80;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+.channel-name {
+  font-size: 26px;
+  font-weight: 800;
+  color: white;
+  letter-spacing: -0.3px;
+  margin-bottom: 2px;
+  position: relative;
+}
+
+.channel-handle {
+  font-size: 14px;
+  color: rgba(255,255,255,0.8);
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.channel-desc {
+  font-size: 15px;
+  color: rgba(255,255,255,0.95);
+  max-width: 300px;
+  margin: 0 auto 20px;
+  line-height: 1.5;
+  position: relative;
+}
+
+/* Stats row */
+.stats-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  background: rgba(255,255,255,0.15);
+  border-radius: 14px;
+  padding: 12px 20px;
+  margin: 0 0 20px;
+  position: relative;
+}
+
+.stat-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.stat-num {
+  font-size: 16px;
+  font-weight: 800;
+  color: white;
+}
+
+.stat-label {
+  font-size: 11px;
+  color: rgba(255,255,255,0.8);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.stat-divider {
+  width: 1px;
+  height: 32px;
+  background: rgba(255,255,255,0.3);
+}
+
+/* Hero CTA button */
+.btn-hero {
+  display: block;
+  width: 100%;
+  min-height: 54px;
+  background: white;
+  color: #ff4444;
+  font-size: 17px;
+  font-weight: 800;
+  border-radius: 16px;
+  padding: 14px 24px;
+  text-decoration: none;
+  text-align: center;
+  line-height: 1.3;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  position: relative;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+  margin-bottom: 16px;
+}
+
+.btn-hero:active {
+  transform: scale(0.97);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+}
+
+/* Trust badges */
+.trust-row {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.trust-badge {
+  background: rgba(255,255,255,0.2);
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 5px 10px;
+  border-radius: 20px;
+  border: 1px solid rgba(255,255,255,0.35);
+}
+
+/* ============================================
+   MAIN CONTENT
+   ============================================ */
+.main-content {
+  padding: 0;
+}
+
+.section-heading {
+  text-align: center;
+  padding: 28px 20px 16px;
+  background: #fff;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.section-title {
+  font-size: 22px;
+  font-weight: 800;
+  color: #1a1a2e;
+  margin-bottom: 4px;
+}
+
+.section-subtitle {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* ============================================
+   PRODUCT SECTION & GRID
+   Mobile: 1 column | Tablet 540px+: 2 columns
+   ============================================ */
+.product-section {
+  padding: 16px 16px 24px;
+  background: #f8f7ff;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+/* Tablet: 2 columns, but since max-width is 460px this rarely triggers */
+@media (min-width: 540px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Empty state */
+.empty-msg {
+  text-align: center;
+  padding: 40px 20px;
+  color: #888;
+  font-size: 15px;
+}
+
+/* ============================================
+   PRODUCT CARD
+   ============================================ */
+.product-card {
+  background: #ffffff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Image */
+.product-img-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+  background: #f5f5f5;
+}
+
+.product-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: none; /* No heavy animations */
+}
+
+/* Badge */
+.badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #ff4444;
+  color: white;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 20px;
+  line-height: 1.4;
+  white-space: nowrap;
+  box-shadow: 0 2px 6px rgba(255,68,68,0.3);
+}
+
+/* Product body */
+.product-body {
+  padding: 14px 14px 16px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 6px;
+}
+
+.product-name {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1a1a2e;
+  line-height: 1.35;
+}
+
+.product-desc {
+  font-size: 13px;
+  color: #666;
+  line-height: 1.5;
+  flex: 1;
+}
+
+.product-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.product-price {
+  font-size: 18px;
+  font-weight: 800;
+  color: #ff4444;
+}
+
+/* Shopee CTA button */
+.btn-shopee {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  width: 100%;
+  background: linear-gradient(135deg, #ff4444, #ff6b35);
+  color: white;
+  font-size: 15px;
+  font-weight: 700;
+  border-radius: 14px;
+  text-decoration: none;
+  padding: 12px 16px;
+  text-align: center;
+  box-shadow: 0 3px 12px rgba(255,68,68,0.3);
+  transition: transform 0.1s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.btn-shopee:active {
+  transform: scale(0.97);
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+.site-footer {
+  background: #1a1a2e;
+  color: rgba(255,255,255,0.8);
+  text-align: center;
+  padding: 28px 20px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer-text {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.footer-tiktok-link {
+  display: inline-block;
+  background: rgba(255,255,255,0.1);
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 24px;
+  text-decoration: none;
+  margin: 4px 0;
+  border: 1px solid rgba(255,255,255,0.2);
+  min-height: 44px;
+  line-height: 1.4;
+}
+
+.footer-copy {
+  font-size: 12px;
+  color: rgba(255,255,255,0.4);
+  margin-top: 4px;
+}
+
+/* ============================================
+   STICKY BAR – Mobile only (hidden on desktop)
+   ============================================ */
+.sticky-bar {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 460px;
+  padding: 10px 16px 14px;
+  background: white;
+  border-top: 1px solid #eee;
+  box-shadow: 0 -4px 20px rgba(0,0,0,0.1);
+  z-index: 100;
+  /* Show only on mobile */
+}
+
+/* Hide sticky bar on screens wider than 768px (desktop) */
+@media (min-width: 768px) {
+  .sticky-bar {
+    display: none;
+  }
+
+  /* Remove bottom padding for sticky bar on desktop */
+  .page-wrapper {
+    padding-bottom: 0;
+  }
+}
+
+.sticky-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 50px;
+  background: linear-gradient(135deg, #ff4444, #ff6b35);
+  color: white;
+  font-size: 16px;
+  font-weight: 800;
+  border-radius: 14px;
+  border: none;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  box-shadow: 0 3px 16px rgba(255,68,68,0.35);
+}
+
+.sticky-btn:active {
+  transform: scale(0.98);
+}
+
+/* ============================================
+   DESKTOP CENTERING – Extra polish
+   ============================================ */
+@media (min-width: 768px) {
+  body {
+    background: #f0eefc;
+    padding: 40px 0;
+  }
+}
+
+/* ============================================
+   PREVENT HORIZONTAL OVERFLOW
+   ============================================ */
+img, video, iframe {
+  max-width: 100%;
+}

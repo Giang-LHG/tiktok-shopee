@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "name": "Đèn ngủ cảm biến chuyển động",
+    "price": "29k",
+    "image": "/images/products/den-ngu.jpg",
+    "link": "https://s.shopee.vn/your-affiliate-link",
+    "badge": "🔥 Đang viral",
+    "description": "Nhỏ gọn, tiện dùng ban đêm, tự sáng khi có người"
+  },
+  {
+    "id": 2,
+    "name": "Máy xay mini cầm tay",
+    "price": "99k",
+    "image": "/images/products/may-xay.jpg",
+    "link": "https://s.shopee.vn/your-affiliate-link",
+    "badge": "💥 Deal hot",
+    "description": "Phù hợp xay sinh tố, đồ ăn nhẹ, dùng pin sạc USB"
+  },
+  {
+    "id": 3,
+    "name": "Giá đỡ điện thoại đa năng",
+    "price": "45k",
+    "image": "/images/products/gia-do.jpg",
+    "link": "https://s.shopee.vn/your-affiliate-link",
+    "badge": "⚡ Bán chạy",
+    "description": "Gập gọn, để bàn hoặc gắn xe, xem TikTok thoải mái"
+  },
+  {
+    "id": 4,
+    "name": "Túi đựng mỹ phẩm chống nước",
+    "price": "55k",
+    "image": "/images/products/tui-myp.jpg",
+    "link": "https://s.shopee.vn/your-affiliate-link",
+    "badge": "✨ Trending",
+    "description": "Chất liệu silicone cao cấp, nhiều ngăn, dễ vệ sinh"
+  },
+  {
+    "id": 5,
+    "name": "Cốc giữ nhiệt inox 500ml",
+    "price": "79k",
+    "image": "/images/products/coc-giu-nhiet.jpg",
+    "link": "https://s.shopee.vn/your-affiliate-link",
+    "badge": "🏆 Bestseller",
+    "description": "Giữ nóng 12h, giữ lạnh 24h, nắp chống tràn thông minh"
+  },
+  {
+    "id": 6,
+    "name": "Móc treo đồ dán tường không cần khoan",
+    "price": "19k",
+    "image": "/images/products/moc-treo.jpg",
+    "link": "https://s.shopee.vn/your-affiliate-link",
+    "badge": "💡 Tiện lợi",
+    "description": "Keo siêu dính, tháo ra không để lại vết, chịu tải 5kg"
+  }
+]
