@@ -2,13 +2,22 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "🔥 Đồ Hay TikTok – Deal Shopee Mỗi Ngày",
+  title: "Creator Setup VN - Gear setup cho content creator",
   description:
-    "Tổng hợp các món đang viral trên TikTok, giá tốt nhất trên Shopee. Cập nhật mỗi ngày!",
-  keywords: ["tiktok", "shopee", "deal hot", "đồ hay", "affiliate", "mua sắm"],
+    "Mic, đèn, camera và desk setup đáng tiền cho content creator. Cập nhật gear Shopee mỗi ngày.",
+  keywords: [
+    "creator setup",
+    "creatorsetupvn",
+    "mic",
+    "đèn setup",
+    "camera",
+    "desk setup",
+    "shopee affiliate",
+  ],
   openGraph: {
-    title: "🔥 Đồ Hay TikTok – Deal Shopee Mỗi Ngày",
-    description: "Tổng hợp các món đang viral, giá tốt trên Shopee 👇",
+    title: "Creator Setup VN",
+    description:
+      "Setup cho content creator: mic, đèn, camera và desk setup đáng tiền.",
     type: "website",
   },
 };
