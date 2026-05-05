@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Creator Setup VN">
+  <defs>
+    <linearGradient id="bg" x1="80" y1="40" x2="430" y2="470" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#111827"/>
+      <stop offset="1" stop-color="#020617"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="150" y1="120" x2="365" y2="390" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#2dd4bf"/>
+      <stop offset="1" stop-color="#0ea5e9"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="url(#bg)"/>
+  <circle cx="256" cy="256" r="184" fill="none" stroke="url(#accent)" stroke-width="22"/>
+  <rect x="185" y="108" width="142" height="210" rx="68" fill="#f8fafc"/>
+  <rect x="217" y="145" width="78" height="12" rx="6" fill="#111827"/>
+  <rect x="217" y="182" width="78" height="12" rx="6" fill="#111827"/>
+  <rect x="217" y="219" width="78" height="12" rx="6" fill="#111827"/>
+  <path d="M155 246v18c0 58 43 103 101 103s101-45 101-103v-18" fill="none" stroke="url(#accent)" stroke-width="32" stroke-linecap="round"/>
+  <path d="M256 367v58" stroke="#f8fafc" stroke-width="32" stroke-linecap="round"/>
+  <path d="M194 425h124" stroke="#f8fafc" stroke-width="32" stroke-linecap="round"/>
+  <circle cx="343" cy="156" r="34" fill="#ef4444"/>
+  <circle cx="343" cy="156" r="14" fill="#fef2f2"/>
+</svg>
